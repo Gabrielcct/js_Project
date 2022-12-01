@@ -290,3 +290,54 @@ const percentages = [
 ];
 console.log(percentages);
 ///////////////array method//////////
+
+const friends = ['Michael', 'Steven', 'Peter'];
+//Push element to Array
+friends.push('Jay');
+
+console.log(friends);
+//add john to array
+friends.unshift('John');
+console.log(friends);
+
+//remove elements//
+friends.pop(); //LAST
+console.log(friends);
+const popped = friends.pop();
+console.log(popped);
+
+friends.shift(); // FIRST
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));
+
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob'));
+
+friends.push('Bob');
+console.log(friends.includes('Bob'));
+
+if (friends.includes('Steven')) {
+    console.log('U have a friend called Steven');
+}
+
+///////////////TASK//////////////////
+const neighbours = ['Argentina', 'Paraguai', 'Colombia', 'Venezuela', 'Peru'];
+neighbours.push('Utopia');
+
+console.log(neighbours);
+neighbours.pop();
+console.log(neighbours);
+
+if (neighbours.includes('Germany')) {
+    console.log('It is an EU country!')
+} else {
+    console.log('Probably not a central European country :D')
+}
+
+var index = neighbours.indexOf('Colombia');
+if (index !== -1) {
+    neighbours[index] = 'France';
+}
+
+console.log(neighbours);
