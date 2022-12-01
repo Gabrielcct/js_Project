@@ -341,3 +341,24 @@ if (index !== -1) {
 }
 
 console.log(neighbours);
+
+//////////////////Challenge/////////////////////
+
+const bill = 100;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill+tip}`);
+
+function calcTip(bill) {
+    const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+    return tip;
+}
+const myTip = calcTip(bill);
+console.log(myTip);
+
+const bills = [125, 555, 44];
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(44)]
+
+const totals = [(tips[0] + bills[0]), (tips[1] + bills[1]), (tips[2] + bills[2])]
+
+console.log(bills, tips, totals);
