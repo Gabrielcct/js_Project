@@ -289,3 +289,4 @@ const percentages = [
     percentageOfWorld1(populations[3])
 ];
 console.log(percentages);
+///////////////array method//////////
