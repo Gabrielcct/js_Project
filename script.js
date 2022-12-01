@@ -232,3 +232,60 @@ function checkWinner2(koala_av, dolphin_av) {
 }
 const win = checkWinner2(koala_av, dolphin_av);
 console.log(win)
+
+/////////ARRAY////////
+
+const family = ['Gabriel', 'Heloisa', 'Vanusa', 'Edilson'];
+//FIRST ITEM FROM ARRAY
+console.log(family[0]);
+//ARRAY SIZE
+console.log(family.length);
+//SELECT LAST ITEM FROM ARRAY
+console.log(family[family.length - 1]);
+//CHANGE OBJ INSIDE ARRAY
+family[1] = 'Jay';
+console.log(family);
+
+const gabriel = ['Gabriel', 'Eugenio', 22, 'Student', family];
+console.log(gabriel);
+
+function calcAge(birthYear) {
+    return 2022 - birthYear
+}
+const years = [1990, 2000, 1966, 1985]
+
+const age = calcAge(years[0]);
+const age6 = calcAge(years[2]);
+const age7 = calcAge(years[years.length - 1]);
+console.log(age, age6, age7);
+
+const ages = [calcAge(years[0]), calcAge(years[2]), calcAge(years[years.length - 1])];
+console.log(ages);
+
+/*1. Create an array containing 4 population values of 4 countries of your choice. 
+You may use the values you have been using previously. Store this array into a 
+variable called 'populations'
+
+2. Log to the console whether the array has 4 elements or not (true or false)
+
+3. Create an array called 'percentages' containing the percentages of the 
+world population for these 4 population values. Use the function 
+'percentageOfWorld1' that you created earlier to compute the 4 
+percentage values.*/
+const populations2 = [2, 332, 5, 68];
+console.log(populations2);
+
+const percentages2 = [percentageOfWorld1(populations2[0]), percentageOfWorld1(populations2[1]), percentageOfWorld1(populations2[populations2.length - 1])];
+console.log(percentages2);
+
+// array size is different from array elements (size starts from 0, element not)
+const populations = [10, 1441, 332, 83];
+
+console.log(populations.length === 4);
+const percentages = [
+    percentageOfWorld1(populations[0]),
+    percentageOfWorld1(populations[1]),
+    percentageOfWorld1(populations[2]),
+    percentageOfWorld1(populations[3])
+];
+console.log(percentages);
