@@ -44,7 +44,7 @@ function describeCountry(country, population, capitalCity) {
     return descriptionCountry;
 }
 
-const myCountry = describeCountry('Brazil', 214.0, 'Brasilia');
+//const myCountry = describeCountry('Brazil', 214.0, 'Brasilia');
 console.log(myCountry)
 
 const england = describeCountry('England', 300.0, 'London');
@@ -362,3 +362,34 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(44)]
 const totals = [(tips[0] + bills[0]), (tips[1] + bills[1]), (tips[2] + bills[2])]
 
 console.log(bills, tips, totals);
+//////////////////////////////////////////////////////////////
+
+//Objects//
+
+const gabrielArray = [
+    'Gabriel',
+    'Eugenio',
+    2022 - 2000,
+    'student', ['Ivan', 'Heloisa', 'Marko']
+];
+
+const Gabriel = {
+    firstName: 'Gabriel',
+    lastName: 'Eugenio',
+    age: 2022 - 2000,
+    job: 'student',
+    friends: ['Ivan', 'Heloisa', 'Marko']
+};
+
+
+/*Create an object called 'myCountry' for a country of your choice, containing 
+properties 'country', 'capital', 'language', 'population' and 
+'neighbours' (an array like we used in previous assignments*/
+
+const myCountry = {
+    country: 'Brazil',
+    capital: 'Brasilia',
+    languange: 'Portuguese',
+    population: 200.00,
+    friends: ['Venezuela', 'Argentina', 'Colombia']
+};
