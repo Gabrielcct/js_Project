@@ -45,7 +45,7 @@ function describeCountry(country, population, capitalCity) {
 }
 
 //const myCountry = describeCountry('Brazil', 214.0, 'Brasilia');
-console.log(myCountry)
+//console.log(myCountry)
 
 const england = describeCountry('England', 300.0, 'London');
 console.log(england)
@@ -378,7 +378,8 @@ const Gabriel = {
     lastName: 'Eugenio',
     age: 2022 - 2000,
     job: 'student',
-    friends: ['Ivan', 'Heloisa', 'Marko']
+    friends: ['Ivan', 'Heloisa', 'Marko'],
+    bestFriend: 'Ivan'
 };
 
 
@@ -393,3 +394,18 @@ const myCountry = {
     population: 200.00,
     friends: ['Venezuela', 'Argentina', 'Colombia']
 };
+
+console.log(myCountry.capital);
+console.log(myCountry['capital']);
+
+myCountry.location = 'South America';
+
+const interestedIn = prompt('What do you want to know about this Brazil?')
+
+if (myCountry[interestedIn]) {
+    console.log(myCountry[interestedIn]);
+} else {
+    console.log('Wrong request');
+}
+
+console.log(`${Gabriel.firstName} has ${Gabriel.friends.length} friends, and his best friend is ${Gabriel.bestFriend} `)
