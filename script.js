@@ -373,14 +373,14 @@ const gabrielArray = [
     'student', ['Ivan', 'Heloisa', 'Marko']
 ];
 
-const Gabriel = {
-    firstName: 'Gabriel',
-    lastName: 'Eugenio',
-    age: 2022 - 2000,
-    job: 'student',
-    friends: ['Ivan', 'Heloisa', 'Marko'],
-    bestFriend: 'Ivan'
-};
+// const Gabriel = {
+//     firstName: 'Gabriel',
+//     lastName: 'Eugenio',
+//     age: 2022 - 2000,
+//     job: 'student',
+//     friends: ['Ivan', 'Heloisa', 'Marko'],
+//     bestFriend: 'Ivan'
+// };
 
 
 /*Create an object called 'myCountry' for a country of your choice, containing 
@@ -388,10 +388,10 @@ properties 'country', 'capital', 'language', 'population' and
 'neighbours' (an array like we used in previous assignments*/
 
 const myCountry = {
-    country: 'Brazil',
-    capital: 'Brasilia',
-    languange: 'Portuguese',
-    population: 200.00,
+    country: 'Finland',
+    capital: 'Helsinki',
+    languange: 'finnish',
+    population: 6,
     friends: ['Venezuela', 'Argentina', 'Colombia']
 };
 
@@ -400,12 +400,57 @@ console.log(myCountry['capital']);
 
 myCountry.location = 'South America';
 
-const interestedIn = prompt('What do you want to know about this Brazil?')
+//const interestedIn = prompt('What do you want to know about this Brazil?')
 
-if (myCountry[interestedIn]) {
-    console.log(myCountry[interestedIn]);
-} else {
-    console.log('Wrong request');
-}
+// if (myCountry[interestedIn]) {
+//     console.log(myCountry[interestedIn]);
+// } else {
+//     console.log('Wrong request');
+// }
 
-console.log(`${Gabriel.firstName} has ${Gabriel.friends.length} friends, and his best friend is ${Gabriel.bestFriend} `)
+//console.log(`${Gabriel.firstName} has ${Gabriel.friends.length} friends, and his best friend is ${Gabriel.bestFriend} `);
+
+/*
+LECTURE: Dot vs. Bracket Notation
+
+1. Using the object from the previous assignment, log a string like this to the 
+console: 'Finland has 6 million finnish-speaking people, 3 neighbouring countries 
+and a capital called Helsinki.'
+
+2. Increase the country's population by two million using dot notation*/
+myCountry['country'] += 2
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.languange} speaking people, ${myCountry.friends.length} neighbouring countries and a capital called ${myCountry.capital}.`)
+
+//////////obj methods//////////////
+
+
+
+const Gabriel = {
+    firstName: 'Gabriel',
+    lastName: 'Eugenio',
+    birthYear: 2000,
+    job: 'student',
+    friends: ['Ivan', 'Heloisa', 'Marko'],
+    bestFriend: 'Ivan',
+    hasDriverLicense: true,
+
+
+    giveAge: function() {
+        this.age = 2022 - this.birthYear;
+        return this.age
+    },
+
+    giveDriverLicense: function() {
+        if (this.hasDriverLicense == true) {
+            return 'has a drivers license';
+        } else {
+            return 'has no drivers license';
+        }
+    }
+};
+
+console.log(Gabriel.giveAge());
+
+console.log(Gabriel.age);
+
+console.log(`${Gabriel.firstName} is ${Gabriel.giveAge()} years old and ${Gabriel.giveDriverLicense()}.`)
