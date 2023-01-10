@@ -259,8 +259,8 @@ const age6 = calcAge(years[2]);
 const age7 = calcAge(years[years.length - 1]);
 console.log(age, age6, age7);
 
-const ages = [calcAge(years[0]), calcAge(years[2]), calcAge(years[years.length - 1])];
-console.log(ages);
+//const ages = [calcAge(years[0]), calcAge(years[2]), calcAge(years[years.length - 1])];
+//console.log(ages);
 
 /*1. Create an array containing 4 population values of 4 countries of your choice. 
 You may use the values you have been using previously. Store this array into a 
@@ -366,12 +366,13 @@ console.log(bills, tips, totals);
 
 //Objects//
 
-const gabrielArray = [
+/*const gabrielArray = [
     'Gabriel',
     'Eugenio',
     2022 - 2000,
-    'student', ['Ivan', 'Heloisa', 'Marko']
-];
+    'student', 
+    ['Ivan', 'Heloisa', 'Marko']
+];*/
 
 // const Gabriel = {
 //     firstName: 'Gabriel',
@@ -487,3 +488,61 @@ console.log(Gabriel.age);
 console.log(`${Gabriel.firstName} is ${Gabriel.giveAge()} years old and ${Gabriel.giveDriverLicense()}.`)
 
 console.log(Gabriel.getSummary());
+
+//////////////////////////////////for loop///////////////////////////
+
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
+
+/*There are elections in your country! In a small town, there are only 50 voters.
+Use a for loop to simulate the 50 people voting, by logging a string like this to
+the console (for numbers 1 to 50): 'Voter number 1 is currently voting'*/
+
+/*for (let voter = 1; voter <= 50; voter++) {
+    console.log(`Voter number ${voter} is currently voting`);
+}*/
+
+/////////////looping arrays//////////////
+const gabrielArray = [
+    'Gabriel',
+    'Eugenio',
+    2022 - 2000,
+    'student', ['Ivan', 'Heloisa', 'Marko'],
+];
+const types = [];
+
+for (let i = 0; i < gabrielArray.length; i++) {
+    //Reading from Gabriel array
+    console.log(gabrielArray[i], typeof gabrielArray[i]);
+
+    // Filling types array
+    //types[i] = typeof gabrielArray[i];
+
+}
+
+console.log(types);
+
+const year = [1992, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+console.log(ages);
+
+//continue and break
+console.log('---ONLY STRING---')
+for (let i = 0; i < gabrielArray.length; i++) {
+    if (typeof gabrielArray[i] !== 'string') continue;
+
+    console.log(gabrielArray[i], typeof gabrielArray[i]);
+}
+
+console.log('---BREAK WITH NUMBER---')
+for (let i = 0; i < gabrielArray.length; i++) {
+    if (typeof gabrielArray[i] === 'number') continue;
+
+    console.log(gabrielArray[i], typeof gabrielArray[i]);
+}
