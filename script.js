@@ -275,11 +275,11 @@ percentage values.*/
 const populations2 = [2, 332, 5, 68];
 console.log(populations2);
 
-const percentages2 = [percentageOfWorld1(populations2[0]), percentageOfWorld1(populations2[1]), percentageOfWorld1(populations2[populations2.length - 1])];
-console.log(percentages2);
+//const percentages2 = [percentageOfWorld1(populations2[0]), percentageOfWorld1(populations2[1]), percentageOfWorld1(populations2[populations2.length - 1])];
+//console.log(percentages2);
 
 // array size is different from array elements (size starts from 0, element not)
-const populations = [10, 1441, 332, 83];
+//const populations = [10, 1441, 332, 83];
 
 console.log(populations.length === 4);
 const percentages = [
@@ -546,3 +546,25 @@ for (let i = 0; i < gabrielArray.length; i++) {
 
     console.log(gabrielArray[i], typeof gabrielArray[i]);
 }
+
+/*
+1. Let's bring back the 'populations' array from a previous assignment
+
+2. Use a for loop to compute an array called 'percentages2' containing the 
+percentages of the world population for the 4 population values. Use the 
+function 'percentageOfWorld1' that you created earlier
+
+3. Confirm that 'percentages2' contains exactly the same values as the 
+'percentages' array that we created manually in the previous assignment, 
+and reflect on how much better this solution is
+*/
+
+const populations = [10, 1441, 332, 83];
+const percentages2 = [];
+
+for (let i = 0; i < new_populations.length; i++) {
+    const perc = percentageOfWorld1(new_populations.length[i]);
+    percentages2.push(perc);
+}
+
+console.log(percentages2);
