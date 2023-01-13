@@ -281,14 +281,14 @@ console.log(populations2);
 // array size is different from array elements (size starts from 0, element not)
 //const populations = [10, 1441, 332, 83];
 
-console.log(populations.length === 4);
-const percentages = [
+//console.log(populations.length === 4);
+/*const percentages = [
     percentageOfWorld1(populations[0]),
     percentageOfWorld1(populations[1]),
     percentageOfWorld1(populations[2]),
     percentageOfWorld1(populations[3])
 ];
-console.log(percentages);
+console.log(percentages);*/
 ///////////////array method//////////
 
 const friends = ['Michael', 'Steven', 'Peter'];
@@ -505,15 +505,15 @@ the console (for numbers 1 to 50): 'Voter number 1 is currently voting'*/
 }*/
 
 /////////////looping arrays//////////////
-const gabrielArray = [
+/*const gabrielArray = [
     'Gabriel',
     'Eugenio',
     2022 - 2000,
     'student', ['Ivan', 'Heloisa', 'Marko'],
-];
+];*/
 const types = [];
 
-for (let i = 0; i < gabrielArray.length; i++) {
+/*for (let i = 0; i < gabrielArray.length; i++) {
     //Reading from Gabriel array
     console.log(gabrielArray[i], typeof gabrielArray[i]);
 
@@ -559,7 +559,7 @@ function 'percentageOfWorld1' that you created earlier
 and reflect on how much better this solution is
 */
 
-const populations = [10, 1441, 332, 83];
+/*const populations = [10, 1441, 332, 83];
 const percentages2 = [];
 
 for (let i = 0; i < new_populations.length; i++) {
@@ -567,4 +567,53 @@ for (let i = 0; i < new_populations.length; i++) {
     percentages2.push(perc);
 }
 
-console.log(percentages2);
+console.log(percentages2);*/
+
+/////loop backwards/////
+
+const gabrielArray = [
+    'Gabriel',
+    'Eugenio',
+    2022 - 2000,
+    'student', ['Ivan', 'Heloisa', 'Marko'],
+];
+
+for (let i = gabrielArray.length - 1; i >= 0; i--) {
+    console.log(i, gabrielArray[i]);
+}
+
+//////////// loop inside loop/////////
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`--------------Staring exercise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Lifting weight repetition ${rep}`);
+    }
+}
+
+/*1. Store this array of arrays into a variable called 'listOfNeighbours'
+[['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 
+'Russia']];
+
+2. Log only the neighbouring countries to the console, one by one, not the entire 
+arrays. Log a string like 'Neighbour: Canada' for each country
+
+3. You will need a loop inside a loop for this. This is actually a bit tricky, so don't 
+worry if it's too difficult for you! But you can still try to figure this out anyway �*/
+
+
+const listOfNeighbours = [
+    ['Canada', 'Mexico'],
+    ['Spain'],
+    ['Norway', 'Sweden', 'Russia']
+];
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+
+
+    for (let j = 0; j < listOfNeighbours[i].length; j++) {
+
+        console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
+    }
+}
