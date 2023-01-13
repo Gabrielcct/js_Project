@@ -344,7 +344,7 @@ console.log(neighbours);
 
 //////////////////Challenge/////////////////////
 
-const bill = 100;
+/*const bill = 100;
 const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill+tip}`);
 
@@ -361,7 +361,7 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(44)]
 
 const totals = [(tips[0] + bills[0]), (tips[1] + bills[1]), (tips[2] + bills[2])]
 
-console.log(bills, tips, totals);
+console.log(bills, tips, totals);*/
 //////////////////////////////////////////////////////////////
 
 //Objects//
@@ -492,9 +492,9 @@ console.log(Gabriel.getSummary());
 //////////////////////////////////for loop///////////////////////////
 
 // for loop keeps running while condition is TRUE
-for (let rep = 1; rep <= 10; rep++) {
+/*for (let rep = 1; rep <= 10; rep++) {
     console.log(`Lifting weights repetition ${rep}`);
-}
+}*/
 
 /*There are elections in your country! In a small town, there are only 50 voters.
 Use a for loop to simulate the 50 people voting, by logging a string like this to
@@ -615,4 +615,50 @@ for (let i = 0; i < listOfNeighbours.length; i++) {
         console.log(`Neighbour: ${listOfNeighbours[i][j]}`);
 
     }
+}
+
+/////////////////while loop/////////////
+
+let rep = 1;
+while (rep <= 10) {
+    //console.log(`While: Lifting weights repetition ${rep}`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log(`Loop is about to end...`)
+}
+
+
+/////////////////Challenge 4/////////////
+const bill = 100;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill+tip}`);
+
+function calcTip(bill) {
+    const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+    return tip;
+}
+const myTip = calcTip(bill);
+console.log(myTip);
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+const tips = [];
+const totals = [];
+
+
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(tips[i] + bills[i]);
+
+}
+
+for (let i = 0; i < bills.length; i++) {
+    console.log(`Bill is: ${bills[i]} Tip is: ${tips[i]}and Total is: ${totals[i]}`)
+
 }
