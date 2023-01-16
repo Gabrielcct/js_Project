@@ -647,12 +647,17 @@ const myTip = calcTip(bill);
 console.log(myTip);
 
 const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-
 const tips = [];
 const totals = [];
-
+bills[0] //22
+bills[1]//295
+bills//whole array
+bills.length//10 lenght starts at 1!!!
 
 for (let i = 0; i < bills.length; i++) {
+    //const tip = calcTip(bills[i]);
+    //tips.push(tip+ bills[i]);
+    //total.push(tip +bills[i]);
     tips.push(calcTip(bills[i]));
     totals.push(tips[i] + bills[i]);
 
@@ -662,3 +667,17 @@ for (let i = 0; i < bills.length; i++) {
     console.log(`Bill is: ${bills[i]} Tip is: ${tips[i]}and Total is: ${totals[i]}`)
 
 }
+/////extra exercise////
+const calcAverage = function(arr){
+    let sum =0;
+    for (let i=0; i<arr.length; i++){
+        // sum = sum + arr [i];
+        sum+=arr[i];
+    }
+    return sum / arr.length;
+}
+console.log(calcAverage([2,3,7]));
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
+
+
